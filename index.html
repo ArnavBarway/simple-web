@@ -71,9 +71,9 @@
         padding: 10px 20px;
         font-size: 1.2rem;
         font-weight: bold;
-        color: black; /* Black text */
+        color: black !important; /* Ensures text is black */
         background-color: white; /* White background */
-        border: 2px solid black; /* Black border for better visibility */
+        border: 2px solid black; /* Black border for contrast */
         border-radius: 5px;
         text-decoration: none;
         transition: background-color 0.3s ease, transform 0.2s ease;
@@ -81,11 +81,13 @@
 
     .works-button:hover {
         background-color: #f0f0f0; /* Light gray on hover */
+        color: black !important; /* Ensures text remains black */
         transform: scale(1.05); /* Slightly enlarge on hover */
     }
 
     .works-button:active {
         background-color: #e0e0e0; /* Slightly darker gray on click */
+        color: black !important; /* Ensures text remains black */
         transform: scale(0.95); /* Slightly shrink on click */
     }
 </style>
