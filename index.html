@@ -38,7 +38,57 @@
         <div class="works-link">
             <a href="works.html" target="_blank">Works</a>
         </div>
+
+        <!-- Audio Player -->
+        <audio id="background-music" loop>
+            <source src="music/music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Music Controls -->
+        <div class="music-controls">
+            <button id="play-music">Play Music</button>
+            <button id="stop-music" style="display: none;">Stop Music</button>
+            <div class="progress-container">
+                <input type="range" id="progress-bar" value="0" max="100" step="0.1">
+            </div>
+        </div>
     </div>
+
+    <script>
+        // JavaScript to handle music play, stop, and progress bar
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('play-music');
+        const stopButton = document.getElementById('stop-music');
+        const progressBar = document.getElementById('progress-bar');
+
+        // Play music
+        playButton.addEventListener('click', () => {
+            audio.play();
+            playButton.style.display = 'none'; // Hide play button
+            stopButton.style.display = 'inline-block'; // Show stop button
+        });
+
+        // Stop music
+        stopButton.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0; // Reset the music to the beginning
+            playButton.style.display = 'inline-block'; // Show play button again
+            stopButton.style.display = 'none'; // Hide stop button
+        });
+
+        // Update the progress bar as music plays
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.value = progress;
+        });
+
+        // Allow user to click on the progress bar to skip to a specific part of the track
+        progressBar.addEventListener('input', () => {
+            const value = progressBar.value;
+            audio.currentTime = (value / 100) * audio.duration;
+        });
+    </script>
 </body>
 
 </html>

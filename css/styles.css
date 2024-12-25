@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -52,11 +53,79 @@ header p {
 .works-link a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: white; /* Adjust as needed */
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .works-link a:hover {
-    color: grey; /* Adjust hover color */
+    color: grey;
+}
+
+/* Music Controls */
+.music-controls {
+    margin-top: 20px;
+}
+
+#play-music {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#play-music:hover {
+    background-color: grey;
+    color: white;
+}
+
+.music-controls {
+    margin-top: 20px;
+}
+
+#progress-bar {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background-color: #444;
+    height: 8px;
+    border-radius: 5px;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#progress-bar::-moz-range-thumb {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+#stop-music {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: #1f1f1f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#stop-music:hover {
+    background-color: grey;
+    color: white;
 }
