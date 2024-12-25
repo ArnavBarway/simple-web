@@ -57,10 +57,38 @@
         </div>
 
         <div class="works-link">
-    <button>
-        <a href="works/">My Works</a>
-    </button>
+    <a href="works/" class="works-button">My Works</a>
 </div>
+
+<style>
+    .works-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .works-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        background-color: #007BFF; /* Blue color */
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .works-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    .works-button:active {
+        background-color: #003d80; /* Even darker on click */
+        transform: scale(0.95); /* Slightly shrink on click */
+    }
+</style>
 <br>
 
 
