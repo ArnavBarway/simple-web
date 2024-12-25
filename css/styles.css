@@ -13,12 +13,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background-color 0.5s ease; /* Add transition for background change */
 }
 
 .container {
     text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
+/* Header */
 header h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -29,6 +32,7 @@ header p {
     margin-bottom: 2rem;
 }
 
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -45,6 +49,7 @@ header p {
     transform: scale(1.2);
 }
 
+/* Works Link */
 .works-link {
     text-align: center;
     margin-top: 20px;
@@ -79,9 +84,15 @@ header p {
     color: white;
 }
 
-/* Optional: Fade in the page content */
-.container {
-    animation: fadeIn 1s ease-out;
+/* Works Section */
+.works-section {
+    display: none;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.works-section.show {
+    display: block;
 }
 
 /* Fade In Animation */
@@ -93,3 +104,4 @@ header p {
         opacity: 1;
     }
 }
+

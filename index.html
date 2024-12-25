@@ -7,6 +7,28 @@
     <title>Arnav Barway</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/logo.png" type="image/png">
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        .works-section {
+            display: none;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .works-section.show {
+            display: block;
+        }
+
+        .works-link {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,11 +56,24 @@
             </a>
         </div>
 
-        <!-- Works Section -->
         <div class="works-link">
-            <a href="works.html" target="_blank">Works</a>
+            <a href="works/" target="_blank">Works</a>
         </div>
-<br>
+
+        <!-- Works Section -->
+        <div class="works-section" id="works-section">
+            <h2>My Works</h2>
+            <div class="work-item">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="work-item">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
 
         <!-- Audio Player -->
         <audio id="background-music" loop>
@@ -51,6 +86,19 @@
     </div>
 
     <script>
+        window.onscroll = function () {
+            const scrollPosition = window.scrollY;
+            const worksSection = document.getElementById('works-section');
+            
+            if (scrollPosition > 200) {
+                document.body.style.backgroundColor = 'white';
+                worksSection.classList.add('show');
+            } else {
+                document.body.style.backgroundColor = '#1f1f1f';
+                worksSection.classList.remove('show');
+            }
+        };
+
         function startMusic() {
             const audio = document.getElementById('background-music');
             audio.play();

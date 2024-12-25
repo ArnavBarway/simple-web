@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .works-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .work-item {
+            background-color: #2d2d2d;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        .work-item:hover {
+            transform: scale(1.05);
+        }
+        .work-item h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .work-item p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .work-item a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .work-item a:hover {
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Works</h1>
+            <p>Explore the projects I’ve worked on</p>
+        </header>
+
+        <div class="works-gallery">
+            <div class="work-item">
+                <h2>KindNodes</h2>
+                <p>KindNodes is a landing page of Minecraft server hosting with some pages.</p>
+                <a href="https://kind-nodes.vercel.app" target="_blank">View Project</a>
+            </div>
+            <div class="work-item">
+                <h2>TSC Marketplace</h2>
+                <p>TSC Marketplace is a currency system for my school.</p>
+                <a href="https://link-to-project.com" target="_blank">View Project</a>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </div>
+</body>
+</html>
