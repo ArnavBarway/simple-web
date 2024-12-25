@@ -62,11 +62,7 @@ header p {
     color: grey;
 }
 
-/* Music Controls */
-.music-controls {
-    margin-top: 20px;
-}
-
+/* Play Button */
 #play-music {
     padding: 10px 20px;
     font-size: 1rem;
@@ -83,65 +79,17 @@ header p {
     color: white;
 }
 
-.music-controls {
-    margin-top: 20px;
+/* Optional: Fade in the page content */
+.container {
+    animation: fadeIn 1s ease-out;
 }
 
-#progress-bar {
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
-    -webkit-appearance: none;
-    background-color: #444;
-    height: 8px;
-    border-radius: 5px;
-}
-
-#progress-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-#progress-bar::-moz-range-thumb {
-    background-color: #fff;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-}
-
-#stop-music {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: white;
-    color: #1f1f1f;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#stop-music:hover {
-    background-color: grey;
-    color: white;
-}
-
-/* Music Attribution */
-.music-attribution {
-    margin-top: 30px;
-    font-size: 0.9rem;
-    color: #ddd;
-}
-
-.music-attribution a {
-    color: #ff5722;
-    text-decoration: none;
-}
-
-.music-attribution a:hover {
-    text-decoration: underline;
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
